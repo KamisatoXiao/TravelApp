@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tl_head"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="8sp"
+            android:layout_marginBottom="8sp"
+            android:src="@drawable/close" />
+
+        <TextView
+            android:id="@+id/post_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:text="发布"
+            android:textColor="#2681FF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/tl_head"
+        android:id="@+id/journey_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_weight="10"
+            android:background="@null"
+            android:hint="标题(必填)"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/wordsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="#cccccc"
+                android:text="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="#cccccc"
+                android:text="/30"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/dividing_line_1"
+        android:layout_below="@id/journey_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"/>
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/main_journey"
+        android:layout_below="@id/dividing_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#F2F2F2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/add_text_italic"
+            android:layout_width="0dp"
+            android:layout_height="28sp"
+            android:layout_weight="1"
+            android:src="@drawable/italic"/>
+        <ImageView
+            android:id="@+id/add_text_bold"
+            android:layout_width="0dp"
+            android:layout_height="28sp"
+            android:layout_weight="1"
+            android:src="@drawable/bold"/>
+        <ImageView
+            android:id="@+id/add_text_strike_through"
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:src="@drawable/strike_through"/>
+        <ImageView
+            android:id="@+id/add_text_underline"
+            android:layout_width="0dp"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:src="@drawable/text_underline"/>
+        <ImageView
+            android:id="@+id/add_pic"
+            android:layout_width="0dp"
+            android:layout_height="28sp"
+            android:layout_weight="1"
+            android:src="@drawable/pic"/>
+        <ImageView
+            android:id="@+id/add_video"
+            android:layout_width="0dp"
+            android:layout_height="28sp"
+            android:layout_weight="1"
+            android:src="@drawable/video"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

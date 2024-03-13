@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/custom_edittext_border"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/province"
+            android:layout_marginLeft="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="杭州"/>
+
+        <ImageView
+            android:padding="6sp"
+            android:layout_gravity="center"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:id="@+id/search_info"
+            android:layout_width="0dp"
+            android:layout_height="45sp"
+            android:layout_weight="4"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:hint="在此搜索信息"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/custom_button_background"
+            android:textColor="@color/black"
+            android:text="搜索"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/searchArea"
+        android:id="@+id/main_button_in_landscape"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="15sp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_all_landscape"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_item_main_landscape_img_selector"
+            android:drawablePadding="@dimen/main_tab_item_image_and_text"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="景点"
+            android:textColor="@drawable/tab_item_txt_sel"/>
+        <TextView
+            android:id="@+id/tv_hotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_item_main_hotel_img_selector"
+            android:drawablePadding="@dimen/main_tab_item_image_and_text"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="酒店"
+            android:textColor="@drawable/tab_item_txt_sel"/>
+        <TextView
+            android:id="@+id/tv_restaurant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_item_main_food_img_selector"
+            android:drawablePadding="@dimen/main_tab_item_image_and_text"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="美食"
+            android:textColor="@drawable/tab_item_txt_sel"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@+id/main_button_in_landscape"
+        android:id="@+id/PostBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/image_Banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/word"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="5sp"
+        android:layout_below="@id/PostBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="相关攻略"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showWorks"
+        android:layout_below="@id/word"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
