@@ -104,11 +104,6 @@ public class AddPostFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //初始化OSSClient
-                String endpoint="oss-cn-hangzhou.aliyuncs.com";
-                String accessKeyId="LTAI5tJtrRCDb6YUERcCoCio";
-                String accessKeySecret="MNDLLx5DrTtHPn0O5vU0PTdgK9BweA";
-                String bucketName="landscap-post";
-
                 OSS client=new OSSClientBuilder().build(endpoint,accessKeyId,accessKeySecret);
                 EnvironmentVariableCredentialsProvider credentialsProvider= CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
             }
